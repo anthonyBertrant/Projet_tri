@@ -43,6 +43,15 @@
 		92C860631D92DB2A00C3ED32 /* TriSelecPerm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriSelecPerm.c; sourceTree = "<group>"; };
 		92C860641D92DB2A00C3ED32 /* TriTas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriTas.c; sourceTree = "<group>"; };
 		92C860651D92DB2A00C3ED32 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		92C860711D92DC1300C3ED32 /* TriArbreBin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriArbreBin.h; sourceTree = "<group>"; };
+		92C860721D92DC1300C3ED32 /* TriBulles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriBulles.h; sourceTree = "<group>"; };
+		92C860731D92DC1300C3ED32 /* TriFusion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriFusion.h; sourceTree = "<group>"; };
+		92C860741D92DC1300C3ED32 /* TriInsertDicho.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriInsertDicho.h; sourceTree = "<group>"; };
+		92C860751D92DC1300C3ED32 /* TriInsertSeq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriInsertSeq.h; sourceTree = "<group>"; };
+		92C860761D92DC1300C3ED32 /* TriRapide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriRapide.h; sourceTree = "<group>"; };
+		92C860771D92DC1300C3ED32 /* TriSelecPerm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriSelecPerm.h; sourceTree = "<group>"; };
+		92C860781D92DC1300C3ED32 /* TriTas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriTas.h; sourceTree = "<group>"; };
+		92C860791D92DC1300C3ED32 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,15 @@
 		92C860531D92D9C300C3ED32 /* Tri */ = {
 			isa = PBXGroup;
 			children = (
+				92C860701D92DC0400C3ED32 /* inc */,
+				92C8606F1D92DBF200C3ED32 /* src */,
+			);
+			path = Tri;
+			sourceTree = "<group>";
+		};
+		92C8606F1D92DBF200C3ED32 /* src */ = {
+			isa = PBXGroup;
+			children = (
 				92C8605B1D92DAF900C3ED32 /* ProjetTri.c */,
 				92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */,
 				92C8605E1D92DB2A00C3ED32 /* TriBulles.c */,
@@ -86,7 +104,23 @@
 				92C860641D92DB2A00C3ED32 /* TriTas.c */,
 				92C860651D92DB2A00C3ED32 /* util.c */,
 			);
-			path = Tri;
+			name = src;
+			sourceTree = "<group>";
+		};
+		92C860701D92DC0400C3ED32 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				92C860711D92DC1300C3ED32 /* TriArbreBin.h */,
+				92C860721D92DC1300C3ED32 /* TriBulles.h */,
+				92C860731D92DC1300C3ED32 /* TriFusion.h */,
+				92C860741D92DC1300C3ED32 /* TriInsertDicho.h */,
+				92C860751D92DC1300C3ED32 /* TriInsertSeq.h */,
+				92C860761D92DC1300C3ED32 /* TriRapide.h */,
+				92C860771D92DC1300C3ED32 /* TriSelecPerm.h */,
+				92C860781D92DC1300C3ED32 /* TriTas.h */,
+				92C860791D92DC1300C3ED32 /* util.h */,
+			);
+			name = inc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
