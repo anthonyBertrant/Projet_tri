@@ -7,6 +7,6 @@ const int Ksizes[15] = {100, 500, 5000, 10000, 50000, 100000,
 void ExecuteBenchmark()
 {
   /*
-  execute les tests
+  execute les testss
   */
 }
