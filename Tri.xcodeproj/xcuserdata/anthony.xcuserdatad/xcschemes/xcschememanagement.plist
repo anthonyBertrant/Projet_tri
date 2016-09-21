@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TestTri.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Tri.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>92C860501D92D9C300C3ED32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92C8607D1D92E2AF00C3ED32</key>
 		<dict>
 			<key>primary</key>
 			<true/>

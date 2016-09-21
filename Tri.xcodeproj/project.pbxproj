@@ -17,6 +17,7 @@
 		92C8606C1D92DB2A00C3ED32 /* TriSelecPerm.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860631D92DB2A00C3ED32 /* TriSelecPerm.c */; };
 		92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860641D92DB2A00C3ED32 /* TriTas.c */; };
 		92C8606E1D92DB2A00C3ED32 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860651D92DB2A00C3ED32 /* util.c */; };
+		92C860811D92E2AF00C3ED32 /* TestTri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C860801D92E2AF00C3ED32 /* TestTri.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,10 +53,20 @@
 		92C860771D92DC1300C3ED32 /* TriSelecPerm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriSelecPerm.h; sourceTree = "<group>"; };
 		92C860781D92DC1300C3ED32 /* TriTas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriTas.h; sourceTree = "<group>"; };
 		92C860791D92DC1300C3ED32 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTri.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C860801D92E2AF00C3ED32 /* TestTri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTri.swift; sourceTree = "<group>"; };
+		92C860821D92E2AF00C3ED32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		92C8604E1D92D9C300C3ED32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C8607B1D92E2AF00C3ED32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				92C860531D92D9C300C3ED32 /* Tri */,
+				92C8607F1D92E2AF00C3ED32 /* TestTri */,
 				92C860521D92D9C300C3ED32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				92C860511D92D9C300C3ED32 /* Tri */,
+				92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +136,15 @@
 			name = inc;
 			sourceTree = "<group>";
 		};
+		92C8607F1D92E2AF00C3ED32 /* TestTri */ = {
+			isa = PBXGroup;
+			children = (
+				92C860801D92E2AF00C3ED32 /* TestTri.swift */,
+				92C860821D92E2AF00C3ED32 /* Info.plist */,
+			);
+			path = TestTri;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,16 +165,38 @@
 			productReference = 92C860511D92D9C300C3ED32 /* Tri */;
 			productType = "com.apple.product-type.tool";
 		};
+		92C8607D1D92E2AF00C3ED32 /* TestTri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C860831D92E2AF00C3ED32 /* Build configuration list for PBXNativeTarget "TestTri" */;
+			buildPhases = (
+				92C8607A1D92E2AF00C3ED32 /* Sources */,
+				92C8607B1D92E2AF00C3ED32 /* Frameworks */,
+				92C8607C1D92E2AF00C3ED32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTri;
+			productName = TestTri;
+			productReference = 92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		92C860491D92D9C300C3ED32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = AnthonyBertrant_BriceMaussang;
 				TargetAttributes = {
 					92C860501D92D9C300C3ED32 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					92C8607D1D92E2AF00C3ED32 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -171,9 +215,20 @@
 			projectRoot = "";
 			targets = (
 				92C860501D92D9C300C3ED32 /* Tri */,
+				92C8607D1D92E2AF00C3ED32 /* TestTri */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92C8607C1D92E2AF00C3ED32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92C8604D1D92D9C300C3ED32 /* Sources */ = {
@@ -190,6 +245,14 @@
 				92C8606B1D92DB2A00C3ED32 /* TriRapide.c in Sources */,
 				92C8606C1D92DB2A00C3ED32 /* TriSelecPerm.c in Sources */,
 				92C860681D92DB2A00C3ED32 /* TriFusion.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C8607A1D92E2AF00C3ED32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C860811D92E2AF00C3ED32 /* TestTri.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +360,33 @@
 			};
 			name = Release;
 		};
+		92C860841D92E2AF00C3ED32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestTri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AnthonyBertrant-BriceMaussang.TestTri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		92C860851D92E2AF00C3ED32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestTri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AnthonyBertrant-BriceMaussang.TestTri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -314,6 +404,14 @@
 			buildConfigurations = (
 				92C860591D92D9C300C3ED32 /* Debug */,
 				92C8605A1D92D9C300C3ED32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92C860831D92E2AF00C3ED32 /* Build configuration list for PBXNativeTarget "TestTri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C860841D92E2AF00C3ED32 /* Debug */,
+				92C860851D92E2AF00C3ED32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

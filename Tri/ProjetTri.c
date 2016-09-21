@@ -18,12 +18,13 @@ typedef int TABLEAU[MAX];
 #include "TriRapide.h"
 #include "TriArbreBin.h"
 #include "TriTas.h"
+#include "util.h"
 
 const int Tailles[15] = {100, 500, 5000, 10000, 50000, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000};
 
 
 int main(){
 
-
+    WriteResultInFile(10, 5000, "test1.txt");
 	return(0);
 }

@@ -5,21 +5,30 @@
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
+#define MAX 1000000
+typedef int TABLEAU[MAX];
 
-int[] CreateRandTab(int Taille){
+
+int * CreateRandTab(int Taille){
+   
+    TABLEAU t;
     
+    return t;
 }
 
-void WriteResultInFile(int result, const char *filename){
+void WriteResultInFile(int result, int taille, const char *filename){
     
-    File* file = NULL;
+    FILE* file = NULL;
     file = fopen(filename, "a");
     
-    if(fichier != NULL){
+    if(file != NULL){
+        
+        fprintf(file, "%d,%d \n",taille,result);
+        fclose(file);
         
     }else {
         printf("Impossible d'ouvrir le fichier %s", filename);

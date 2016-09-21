@@ -1,6 +1,9 @@
 #ifndef HEADERFILE_H
 #define HEADERFILE_H
 
-void TriSelecPerm(TABLEAU[] t);
+#define MAX 1000000
+typedef int TABLEAU[MAX];
+
+void TriSelecPerm(TABLEAU t);
 
 #endif
