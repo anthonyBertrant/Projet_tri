@@ -8,9 +8,19 @@
 #include <stdlib.h>
 #include "ExecBenchmark.h";
 
+#include "TriInsertSeq.h"
+#include "TriInsertDicho.h"
+#include "TriSelecPerm.h"
+#include "TriBulles.h"
+#include "TriFusion.h"
+#include "TriRapide.h"
+#include "TriArbreBin.h"
+#include "TriTas.h"
 
-int main(){
+#define MAX 100000;
+typedef int[MAX] TABLEAU;
 
-
+int main()
+{
 	return(0);
 }
