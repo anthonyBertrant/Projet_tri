@@ -9,7 +9,8 @@
 
 
 #include <stdlib.h>
-#include <time.h>
+#include "ExecBenchmark.h";
+
 #include "TriInsertSeq.h"
 #include "TriInsertDicho.h"
 #include "TriSelecPerm.h"
