@@ -6,6 +6,7 @@
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
 #include <stdio.h>
+#include "TriSelecPerm.h"
 
 #define MAX 1000000
 typedef int TABLEAU[MAX];

@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include "util.h"
 
 #define MAX 1000000
 typedef int TABLEAU[MAX];
