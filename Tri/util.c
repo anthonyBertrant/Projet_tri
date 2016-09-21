@@ -1,5 +1,5 @@
 //
-//  ProjetTri.c
+//  util.c
 //  Tri
 //
 //  Created by Anthony Bertrant on 21/09/2016.
@@ -10,18 +10,19 @@
 #include <time.h>
 #include "util.h"
 
-#define MAX 1000000
-typedef int TABLEAU[MAX];
-
 
 int * CreateRandTab(int Taille){
-   
-    TABLEAU t;
+   /*Specification: la fonction renvoie un tableau rempli d'entier aleatoires spour taille 
+    <Taille> donnée et renvoie le tableau nouvellement crée. */
+    int t[Taille];
     
     return t;
 }
 
 void WriteResultInFile(int result, int taille, const char *filename){
+    /*Specification: La fonction ecris dans un fichier .csv les informations <result> et
+     <taille> pour un fichier <filename> donné. Si le fichier existe deja, il est complété
+     sinon, il est crée.*/
     
     FILE* file = NULL;
     file = fopen(filename, "a");
