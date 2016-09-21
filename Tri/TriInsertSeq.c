@@ -15,4 +15,20 @@ typedef int TABLEAU[MAX];
 void TriInsertSeq(TABLEAU t){
 
 
+void TriInsertSeq(TABLEAU array)
+{
+  int i, p, x;
+  
+  for (i = 1; i < n; ++i)
+  {
+    p = 0;
+    while (array[p] < array[i]) ++p;
+    
+    x = array[i];
+    
+    for (j = i-1; p <= j; j = j-1)
+      array[j+1] = t[j];
+      
+    t[p] = x;
+  }  
 }

@@ -18,3 +18,9 @@ void ExecuteBenchmark(){
 execute les tests
 */
 }
+=======
+void ExecuteBenchmark()
+/*
+execute les tests
+*/
+>>>>>>> master
