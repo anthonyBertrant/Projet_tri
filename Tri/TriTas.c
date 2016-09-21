@@ -6,11 +6,12 @@
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
 #include <stdio.h>
+#include "TriTas.h"
 
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void TriRapide(TABLEAU t){
+void TriTas(TABLEAU t){
 
 
 }

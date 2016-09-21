@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92C8605C1D92DAF900C3ED32 /* ProjetTri.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605B1D92DAF900C3ED32 /* ProjetTri.c */; };
 		92C860661D92DB2A00C3ED32 /* TriArbreBin.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */; };
 		92C860671D92DB2A00C3ED32 /* TriBulles.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605E1D92DB2A00C3ED32 /* TriBulles.c */; };
 		92C860681D92DB2A00C3ED32 /* TriFusion.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605F1D92DB2A00C3ED32 /* TriFusion.c */; };
@@ -17,7 +16,11 @@
 		92C8606C1D92DB2A00C3ED32 /* TriSelecPerm.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860631D92DB2A00C3ED32 /* TriSelecPerm.c */; };
 		92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860641D92DB2A00C3ED32 /* TriTas.c */; };
 		92C8606E1D92DB2A00C3ED32 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860651D92DB2A00C3ED32 /* util.c */; };
+<<<<<<< HEAD
+		92CE857F1D9302150092D2FC /* ExecuteBenchmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CE857E1D9302150092D2FC /* ExecuteBenchmark.c */; };
+=======
 		92CE857A1D92F4A40092D2FC /* ExecuteBenchmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CE85791D92F4A40092D2FC /* ExecuteBenchmark.c */; };
+>>>>>>> master
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		92C860511D92D9C300C3ED32 /* Tri */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tri; sourceTree = BUILT_PRODUCTS_DIR; };
-		92C8605B1D92DAF900C3ED32 /* ProjetTri.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ProjetTri.c; sourceTree = "<group>"; };
 		92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriArbreBin.c; sourceTree = "<group>"; };
 		92C8605E1D92DB2A00C3ED32 /* TriBulles.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriBulles.c; sourceTree = "<group>"; };
 		92C8605F1D92DB2A00C3ED32 /* TriFusion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriFusion.c; sourceTree = "<group>"; };
@@ -53,12 +55,25 @@
 		92C860771D92DC1300C3ED32 /* TriSelecPerm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriSelecPerm.h; sourceTree = "<group>"; };
 		92C860781D92DC1300C3ED32 /* TriTas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriTas.h; sourceTree = "<group>"; };
 		92C860791D92DC1300C3ED32 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTri.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92CE857E1D9302150092D2FC /* ExecuteBenchmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ExecuteBenchmark.c; sourceTree = "<group>"; };
+		92CE85801D93021B0092D2FC /* ExecuteBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteBenchmark.h; sourceTree = "<group>"; };
+=======
 		92CE85781D92F49E0092D2FC /* ExecuteBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteBenchmark.h; sourceTree = "<group>"; };
 		92CE85791D92F4A40092D2FC /* ExecuteBenchmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ExecuteBenchmark.c; sourceTree = "<group>"; };
+>>>>>>> master
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		92C8604E1D92D9C300C3ED32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C8607B1D92E2AF00C3ED32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				92C860511D92D9C300C3ED32 /* Tri */,
+				92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,8 +112,12 @@
 		92C8606F1D92DBF200C3ED32 /* src */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				92CE857E1D9302150092D2FC /* ExecuteBenchmark.c */,
+=======
 				92CE85791D92F4A40092D2FC /* ExecuteBenchmark.c */,
 				92C8605B1D92DAF900C3ED32 /* ProjetTri.c */,
+>>>>>>> master
 				92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */,
 				92C8605E1D92DB2A00C3ED32 /* TriBulles.c */,
 				92C8605F1D92DB2A00C3ED32 /* TriFusion.c */,
@@ -114,7 +134,11 @@
 		92C860701D92DC0400C3ED32 /* inc */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				92CE85801D93021B0092D2FC /* ExecuteBenchmark.h */,
+=======
 				92CE85781D92F49E0092D2FC /* ExecuteBenchmark.h */,
+>>>>>>> master
 				92C860711D92DC1300C3ED32 /* TriArbreBin.h */,
 				92C860721D92DC1300C3ED32 /* TriBulles.h */,
 				92C860731D92DC1300C3ED32 /* TriFusion.h */,
@@ -148,16 +172,38 @@
 			productReference = 92C860511D92D9C300C3ED32 /* Tri */;
 			productType = "com.apple.product-type.tool";
 		};
+		92C8607D1D92E2AF00C3ED32 /* TestTri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C860831D92E2AF00C3ED32 /* Build configuration list for PBXNativeTarget "TestTri" */;
+			buildPhases = (
+				92C8607A1D92E2AF00C3ED32 /* Sources */,
+				92C8607B1D92E2AF00C3ED32 /* Frameworks */,
+				92C8607C1D92E2AF00C3ED32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTri;
+			productName = TestTri;
+			productReference = 92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		92C860491D92D9C300C3ED32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = AnthonyBertrant_BriceMaussang;
 				TargetAttributes = {
 					92C860501D92D9C300C3ED32 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					92C8607D1D92E2AF00C3ED32 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -176,9 +222,20 @@
 			projectRoot = "";
 			targets = (
 				92C860501D92D9C300C3ED32 /* Tri */,
+				92C8607D1D92E2AF00C3ED32 /* TestTri */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92C8607C1D92E2AF00C3ED32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92C8604D1D92D9C300C3ED32 /* Sources */ = {
@@ -186,16 +243,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C860661D92DB2A00C3ED32 /* TriArbreBin.c in Sources */,
-				92C8605C1D92DAF900C3ED32 /* ProjetTri.c in Sources */,
 				92C8606A1D92DB2A00C3ED32 /* TriInsertSeq.c in Sources */,
 				92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */,
 				92C860691D92DB2A00C3ED32 /* TriInsertDicho.c in Sources */,
+<<<<<<< HEAD
+				92CE857F1D9302150092D2FC /* ExecuteBenchmark.c in Sources */,
+=======
 				92CE857A1D92F4A40092D2FC /* ExecuteBenchmark.c in Sources */,
+>>>>>>> master
 				92C8606E1D92DB2A00C3ED32 /* util.c in Sources */,
 				92C860671D92DB2A00C3ED32 /* TriBulles.c in Sources */,
 				92C8606B1D92DB2A00C3ED32 /* TriRapide.c in Sources */,
 				92C8606C1D92DB2A00C3ED32 /* TriSelecPerm.c in Sources */,
 				92C860681D92DB2A00C3ED32 /* TriFusion.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C8607A1D92E2AF00C3ED32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +370,33 @@
 			};
 			name = Release;
 		};
+		92C860841D92E2AF00C3ED32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestTri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AnthonyBertrant-BriceMaussang.TestTri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		92C860851D92E2AF00C3ED32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestTri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AnthonyBertrant-BriceMaussang.TestTri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +417,18 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+<<<<<<< HEAD
+		};
+		92C860831D92E2AF00C3ED32 /* Build configuration list for PBXNativeTarget "TestTri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C860841D92E2AF00C3ED32 /* Debug */,
+				92C860851D92E2AF00C3ED32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+=======
+>>>>>>> master
 		};
 /* End XCConfigurationList section */
 	};
