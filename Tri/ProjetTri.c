@@ -5,8 +5,7 @@
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
-#define MAX 1000000
-typedef int TABLEAU[MAX];
+
 
 #include <stdlib.h>
 #include <time.h>
@@ -25,6 +24,6 @@ const int Tailles[15] = {100, 500, 5000, 10000, 50000, 100000, 200000, 300000, 4
 
 int main(){
 
-    WriteResultInFile(10, 5000, "test1.txt");
+    WriteResultInFile(187, 5000, "test2.csv");
 	return(0);
 }

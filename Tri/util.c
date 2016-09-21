@@ -29,7 +29,7 @@ void WriteResultInFile(int result, int taille, const char *filename){
     
     if(file != NULL){
         
-        fprintf(file, "%d,%d \n",taille,result);
+        fprintf(file, "%d;%d \n",taille,result);
         fclose(file);
         
     }else {
