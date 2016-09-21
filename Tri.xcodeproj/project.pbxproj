@@ -17,7 +17,6 @@
 		92C8606C1D92DB2A00C3ED32 /* TriSelecPerm.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860631D92DB2A00C3ED32 /* TriSelecPerm.c */; };
 		92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860641D92DB2A00C3ED32 /* TriTas.c */; };
 		92C8606E1D92DB2A00C3ED32 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860651D92DB2A00C3ED32 /* util.c */; };
-		92C860811D92E2AF00C3ED32 /* TestTri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C860801D92E2AF00C3ED32 /* TestTri.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,8 +53,6 @@
 		92C860781D92DC1300C3ED32 /* TriTas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriTas.h; sourceTree = "<group>"; };
 		92C860791D92DC1300C3ED32 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTri.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92C860801D92E2AF00C3ED32 /* TestTri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTri.swift; sourceTree = "<group>"; };
-		92C860821D92E2AF00C3ED32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				92C860531D92D9C300C3ED32 /* Tri */,
-				92C8607F1D92E2AF00C3ED32 /* TestTri */,
 				92C860521D92D9C300C3ED32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,15 +130,6 @@
 				92C860791D92DC1300C3ED32 /* util.h */,
 			);
 			name = inc;
-			sourceTree = "<group>";
-		};
-		92C8607F1D92E2AF00C3ED32 /* TestTri */ = {
-			isa = PBXGroup;
-			children = (
-				92C860801D92E2AF00C3ED32 /* TestTri.swift */,
-				92C860821D92E2AF00C3ED32 /* Info.plist */,
-			);
-			path = TestTri;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92C860811D92E2AF00C3ED32 /* TestTri.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +392,7 @@
 				92C8605A1D92D9C300C3ED32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92C860831D92E2AF00C3ED32 /* Build configuration list for PBXNativeTarget "TestTri" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +401,7 @@
 				92C860851D92E2AF00C3ED32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
