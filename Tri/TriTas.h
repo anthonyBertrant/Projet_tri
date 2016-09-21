@@ -4,6 +4,6 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void TriRapide(TABLEAU t);
+void TriTas(TABLEAU t);
 
 #endif
