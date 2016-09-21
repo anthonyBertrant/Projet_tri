@@ -10,7 +10,7 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void TriRapide(TABLEAU[MAX]){
+void TriRapide(TABLEAU t){
 
 
 }

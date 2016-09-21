@@ -6,11 +6,11 @@
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
 #include <stdio.h>
-
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void TriArbreBin(TABLEAU[MAX])
+
+void TriArbreBin(TABLEAU t)
 {
 
 }
