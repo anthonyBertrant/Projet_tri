@@ -17,6 +17,7 @@
 		92C8606C1D92DB2A00C3ED32 /* TriSelecPerm.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860631D92DB2A00C3ED32 /* TriSelecPerm.c */; };
 		92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860641D92DB2A00C3ED32 /* TriTas.c */; };
 		92C8606E1D92DB2A00C3ED32 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C860651D92DB2A00C3ED32 /* util.c */; };
+		92CE85771D92F26A0092D2FC /* ExecuteBenchmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CE85761D92F26A0092D2FC /* ExecuteBenchmark.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,8 @@
 		92C860781D92DC1300C3ED32 /* TriTas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriTas.h; sourceTree = "<group>"; };
 		92C860791D92DC1300C3ED32 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		92C8607E1D92E2AF00C3ED32 /* TestTri.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTri.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92CE85751D92F26A0092D2FC /* ExecuteBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteBenchmark.h; sourceTree = "<group>"; };
+		92CE85761D92F26A0092D2FC /* ExecuteBenchmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ExecuteBenchmark.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,7 @@
 		92C8606F1D92DBF200C3ED32 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				92CE85761D92F26A0092D2FC /* ExecuteBenchmark.c */,
 				92C8605B1D92DAF900C3ED32 /* ProjetTri.c */,
 				92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */,
 				92C8605E1D92DB2A00C3ED32 /* TriBulles.c */,
@@ -124,6 +128,7 @@
 				92C860731D92DC1300C3ED32 /* TriFusion.h */,
 				92C860741D92DC1300C3ED32 /* TriInsertDicho.h */,
 				92C860751D92DC1300C3ED32 /* TriInsertSeq.h */,
+				92CE85751D92F26A0092D2FC /* ExecuteBenchmark.h */,
 				92C860761D92DC1300C3ED32 /* TriRapide.h */,
 				92C860771D92DC1300C3ED32 /* TriSelecPerm.h */,
 				92C860781D92DC1300C3ED32 /* TriTas.h */,
@@ -227,6 +232,7 @@
 				92C8606A1D92DB2A00C3ED32 /* TriInsertSeq.c in Sources */,
 				92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */,
 				92C860691D92DB2A00C3ED32 /* TriInsertDicho.c in Sources */,
+				92CE85771D92F26A0092D2FC /* ExecuteBenchmark.c in Sources */,
 				92C8606E1D92DB2A00C3ED32 /* util.c in Sources */,
 				92C860671D92DB2A00C3ED32 /* TriBulles.c in Sources */,
 				92C8606B1D92DB2A00C3ED32 /* TriRapide.c in Sources */,
