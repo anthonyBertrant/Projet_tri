@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92C8605C1D92DAF900C3ED32 /* ProjetTri.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605B1D92DAF900C3ED32 /* ProjetTri.c */; };
 		92C860661D92DB2A00C3ED32 /* TriArbreBin.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */; };
 		92C860671D92DB2A00C3ED32 /* TriBulles.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605E1D92DB2A00C3ED32 /* TriBulles.c */; };
 		92C860681D92DB2A00C3ED32 /* TriFusion.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C8605F1D92DB2A00C3ED32 /* TriFusion.c */; };
@@ -34,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		92C860511D92D9C300C3ED32 /* Tri */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tri; sourceTree = BUILT_PRODUCTS_DIR; };
-		92C8605B1D92DAF900C3ED32 /* ProjetTri.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ProjetTri.c; sourceTree = "<group>"; };
 		92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriArbreBin.c; sourceTree = "<group>"; };
 		92C8605E1D92DB2A00C3ED32 /* TriBulles.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriBulles.c; sourceTree = "<group>"; };
 		92C8605F1D92DB2A00C3ED32 /* TriFusion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriFusion.c; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				92CE857E1D9302150092D2FC /* ExecuteBenchmark.c */,
-				92C8605B1D92DAF900C3ED32 /* ProjetTri.c */,
 				92C8605D1D92DB2A00C3ED32 /* TriArbreBin.c */,
 				92C8605E1D92DB2A00C3ED32 /* TriBulles.c */,
 				92C8605F1D92DB2A00C3ED32 /* TriFusion.c */,
@@ -228,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C860661D92DB2A00C3ED32 /* TriArbreBin.c in Sources */,
-				92C8605C1D92DAF900C3ED32 /* ProjetTri.c in Sources */,
 				92C8606A1D92DB2A00C3ED32 /* TriInsertSeq.c in Sources */,
 				92C8606D1D92DB2A00C3ED32 /* TriTas.c in Sources */,
 				92C860691D92DB2A00C3ED32 /* TriInsertDicho.c in Sources */,
