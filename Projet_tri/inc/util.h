@@ -6,4 +6,6 @@ int * CreateRandTab(int Taille);
 
 void WriteResultInFile(int result, int taille, const char *filename);
 
+void Swap(int tableau[], int indice1, int indice2);
+
 #endif

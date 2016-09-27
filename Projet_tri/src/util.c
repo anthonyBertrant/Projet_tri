@@ -37,3 +37,14 @@ void WriteResultInFile(int result, int taille, const char *filename){
     }
 }
 
+void Swap(int tableau[], int index1, int index2){
+    /*spec: la fonction permet de permutter deux elements d'un tableau*/
+    
+    int tmp;
+    tmp = tableau[index1];
+    tableau[index1] = tableau[index2];
+    tableau[index2] = tmp;
+}
+
+
+

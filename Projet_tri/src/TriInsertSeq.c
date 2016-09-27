@@ -11,6 +11,11 @@
 
 void TriInsertSeq(TABLEAU array)
 {
+  //test
+    int n;
+    int j;
+    TABLEAU t;
+    
   int i, p, x;
   
   for (i = 1; i < n; ++i)

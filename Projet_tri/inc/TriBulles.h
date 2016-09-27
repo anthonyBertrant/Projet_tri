@@ -4,6 +4,6 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void TriBulles(TABLEAU t);
+void TriBulles(TABLEAU t, int tabSize);
 
 #endif
