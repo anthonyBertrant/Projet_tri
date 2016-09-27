@@ -7,16 +7,7 @@
 //
 #include <stdio.h>
 #include "TriInsertSeq.h"
-<<<<<<< HEAD
 
-#define MAX 1000000
-typedef int TABLEAU[MAX];
-
-
-void TriInsertSeq(TABLEAU t){
-
-=======
->>>>>>> master
 
 void TriInsertSeq(TABLEAU array)
 {
@@ -35,3 +26,4 @@ void TriInsertSeq(TABLEAU array)
     t[p] = x;
   }  
 }
+
