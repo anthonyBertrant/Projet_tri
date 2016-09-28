@@ -2,6 +2,9 @@
 #ifndef HEADERFILE_H
 #define HEADERFILE_H
 
+#define MAX 1000000
+typedef int TABLEAU[MAX];
+
 void GenerateRandTab(TABLEAU t, int tabSize);
 /* spécification: 
 Rempli le tableau passé en paramètre avec des valeurs aléatoires.
@@ -9,9 +12,11 @@ Rempli le tableau passé en paramètre avec des valeurs aléatoires.
 	-en sortie: t[0..tabSize] rempli avec avec des entiers générés aléatoirement.
 */
 
-void WriteResultInFile(int result, int size, const char *filename);
+void WriteResultInFile(float result, int size, const char *filename);
 /* spécification: 
-
+    Rempli le fichier *filename, avec le resultat du temps d'execution du tri 
+ en secondes, pour une taille de donnée.
+    _Entrée: result, size > 0, *filename not null
 */
 
 void Swap(TABLEAU t, int x, int y);

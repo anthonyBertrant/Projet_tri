@@ -17,60 +17,109 @@ const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,
 
 
 void testTriRapide(TABLEAU t, int tabSize){
-    //int t[17] = {10, 100, 102, 109, 300, 3, 4, 5,6, 8, 307, 29, 30, 847, 32, 1, 9};
-    TriRapide(t, 0, 16);
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
     
-    for(int i = 0; i < 17; ++i){
-        printf("%d \n", t[i]);
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriRapide(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        printf("fin test N°%d\n", i+1);
+        
     }
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
+    
+    WriteResultInFile(result, tabSize, "TriRapide.csv");
 }
 
 void testTriSelecPerm(TABLEAU t, int tabSize){
-    //int t[17] = {10, 100, 102, 109, 300, 3, 4, 5,6, 8, 307, 29, 30, 847, 32, 1, 9};
-    TriSelecPerm(t, 17);
-    
-    for(int i = 0; i < 17; ++i){
-        printf("%d \n", t[i]);
-    }
-}
-
-float testTriBulles(TABLEAU t, int tabSize){
-    //int t[17] = {10, 100, 102, 109, 300, 3, 4, 5,6, 8, 307, 29, 30, 847, 32, 1, 9};
+    /*spec: fais 20fois le test de trie de l'algorithme, puis ecris la moyenne d'execution*/
     clock_t debut;
     clock_t fin;
+    float result = 0.0;
     
-    debut = clock();
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriSelecPerm(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        printf("fin test N°%d\n", i+1);
+        
+    }
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
     
-    TriBulles(t, tabSize);
+    WriteResultInFile(result, tabSize, "TriSelecPerm.csv");
+}
+
+void testTriBulles(TABLEAU t, int tabSize){
+    /*spec: fais 20fois le test de trie de l'algorithme, puis ecris la moyenne d'execution*/
     
-    /*for(int i = 0; i < tabSize; ++i){
-        printf("%d \n", t[i]);
-    }*/
-    
-    fin = clock();
-    
-    return (fin - debut) * 1.0/CLOCKS_PER_SEC;
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
+
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriBulles(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        printf("fin test N°%d\n", i+1);
+
+    }
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
+
+    WriteResultInFile(result, tabSize, "TriBulles.csv");
 }
 
 void testTriInsertSeq(TABLEAU t, int tabSize){
-    //int t[17] = {10, 100, 102, 109, 300, 3, 4, 5,6, 8, 307, 29, 30, 847, 32, 1, 9};
-    TriInsertSeq(t, 17);
     for(int i = 0; i < 17; ++i){
         printf("%d \n", t[i]);
     }
+    
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
+    
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriInsertSeq(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        printf("fin test N°%d\n", i+1);
+        
+    }
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
+    
+    WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
 }
 
 void ExecuteBenchmark(void)
 {
     TABLEAU t;
     float result = 0.0;
-    /*for(int i = 0; i < 14; ++i){
-        testTriInsertSeq(t, Ksizes[i]);
-        testTriRapide(t, Ksizes[i]);
-        testTriSelecPerm(t, Ksizes[i]);
     
-    }*/
-    GenerateRandTab(t, Ksizes[0]);
-    result = testTriBulles(t, Ksizes[6]);
-    printf("TriBulle effectué en %f secondes", result);
+    for(int i = 0; i < 4; ++i){
+        GenerateRandTab(t, Ksizes[i]);
+        testTriBulles(t, Ksizes[i]);
+        
+    }
+    
 }

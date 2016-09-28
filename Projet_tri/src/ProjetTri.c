@@ -8,9 +8,6 @@
 
 #include "ExecuteBenchmark.h"
 
-#define MAX 1000000
-typedef int TABLEAU[MAX];
-
 
 int main()
 {
