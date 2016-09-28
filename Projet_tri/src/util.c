@@ -30,17 +30,6 @@ void WriteResultInFile(float result, int taille, const char *filename){
      <taille> pour un fichier <filename> donné. Si le fichier existe deja, il est complété
      sinon, il est crée.*/
     
-    /*FILE* file = NULL;
-    file = fopen(filename, "a");
-    
-    if(file != NULL){
-        
-        fprintf(file, "%d;%f \n",taille,result);
-        fclose(file);
-        
-    }else {
-        printf("Impossible d'ouvrir le fichier %s", filename);
-    }*/
     
     if( access( filename, F_OK ) != -1 ) {
         // file exists

@@ -134,10 +134,11 @@ void ExecuteBenchmark(void)
     TABLEAU t;
     float result = 0.0;
     
-    for(int i = 0; i < 4; ++i){
+    for(int i = 0; i < 5; ++i){
         GenerateRandTab(t, Ksizes[i]);
         testTriBulles(t, Ksizes[i]);
-        
+        testTriInsertSeq(t, Ksizes[i]);
+        testTriBulles(t, Ksizes[i]);
     }
     
 }
