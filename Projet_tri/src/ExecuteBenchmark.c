@@ -86,10 +86,6 @@ void testTriBulles(TABLEAU t, int tabSize){
 }
 
 void testTriInsertSeq(TABLEAU t, int tabSize){
-    for(int i = 0; i < 17; ++i){
-        printf("%d \n", t[i]);
-    }
-    
     clock_t debut;
     clock_t fin;
     float result = 0.0;
@@ -109,6 +105,28 @@ void testTriInsertSeq(TABLEAU t, int tabSize){
     printf("fin test pour taille %d\n", tabSize);
     
     WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
+}
+
+void testTriFusion(TABLEAU t, int tabSize){
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
+    
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriFusion(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        printf("fin test N°%d\n", i+1);
+        
+    }
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
+    
+    WriteResultInFile(result, tabSize, "TriFusion.csv");
 }
 
 void ExecuteBenchmark(void)
