@@ -2,10 +2,13 @@
 #ifndef HEADERFILE_H
 #define HEADERFILE_H
 
-int * CreateRandTab(int Taille);
+#define MAX 1000000
+typedef int TABLEAU[MAX];
+
+void GenerateRandTab(TABLEAU t, int tabSize);
 
 void WriteResultInFile(int result, int taille, const char *filename);
 
-void Swap(int tableau[], int indice1, int indice2);
+void Swap(TABLEAU t, int indice1, int indice2);
 
 #endif

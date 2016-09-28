@@ -5,18 +5,23 @@
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
+#include "util.h"
+#include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
-#include "util.h"
+#include <stdlib.h>
+
+#define MAX 1000000
+typedef int TABLEAU[MAX];
 
 
-int * CreateRandTab(int Taille){
-   /*Specification: la fonction renvoie un tableau rempli d'entier aleatoires spour taille 
-    <Taille> donnée et renvoie le tableau nouvellement crée. */
-    int t[Taille];
-    
-    return t;
+void GenerateRandTab(TABLEAU t, int tabSize){
+   /*Specification: la fonction rempli le tableau d'entier aléatoire pour 
+    une taille donnée*/
+    srand(time(0));
+    for(int i = 0; i < tabSize-1; ++i){
+        t[i] = rand() + 1;
+    }
 }
 
 void WriteResultInFile(int result, int taille, const char *filename){
@@ -37,13 +42,13 @@ void WriteResultInFile(int result, int taille, const char *filename){
     }
 }
 
-void Swap(int tableau[], int index1, int index2){
+void Swap(TABLEAU t, int index1, int index2){
     /*spec: la fonction permet de permutter deux elements d'un tableau*/
     
     int tmp;
-    tmp = tableau[index1];
-    tableau[index1] = tableau[index2];
-    tableau[index2] = tmp;
+    tmp = t[index1];
+    t[index1] = t[index2];
+    t[index2] = tmp;
 }
 
 
