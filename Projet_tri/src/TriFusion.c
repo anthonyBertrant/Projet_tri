@@ -11,16 +11,35 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void Fusion(TABLEAU t, int debut, int pivot, int fin){
+void Fusion(TABLEAU t, int beg, int middle, int end){
     /*spec: entrée: 0 <= debut <= pivot < fin <= taille -1
                     t[debut...pivot] trié
                     t[pivot+1...fin] trié
      
             sortie: t[debut...fin] trié
      */
+    int *tmp = (int*) malloc ((middle - beg + 1) * sizeof(int));
+    int i;
     
-    //-------------------------TODO : faire la Fusion------------------------------
+    for (i = beg; i <= middle; ++i) tmp[i - beg] = t[i];
     
+    int left = beg;
+    int right = middle + 1;
+    
+    for (i = beg; i <= end; ++i)
+    {
+        if (left == middle + 1) break;
+        if (right == end + 1 || tmp[left] <= t[right])
+        {
+            t[i] = tmp[left - beg];
+            ++left;
+        }
+        else
+        {
+            t[i] = tmp[right];
+            ++right;
+        }
+    }
 }
      
 
