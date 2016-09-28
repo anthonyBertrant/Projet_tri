@@ -9,6 +9,7 @@
 #include "TriFusion.h"
 #include "TriArbreBin.h"
 #include "TriTas.h"
+#include "time.h"
 
 const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,
                         200000, 300000, 400000, 500000, 600000,
@@ -33,12 +34,22 @@ void testTriSelecPerm(TABLEAU t, int tabSize){
     }
 }
 
-void testTriBulles(TABLEAU t, int tabSize){
+float testTriBulles(TABLEAU t, int tabSize){
     //int t[17] = {10, 100, 102, 109, 300, 3, 4, 5,6, 8, 307, 29, 30, 847, 32, 1, 9};
+    clock_t debut;
+    clock_t fin;
+    
+    debut = clock();
+    
     TriBulles(t, tabSize);
-    for(int i = 0; i < tabSize; ++i){
+    
+    /*for(int i = 0; i < tabSize; ++i){
         printf("%d \n", t[i]);
-    }
+    }*/
+    
+    fin = clock();
+    
+    return (fin - debut) * 1.0/CLOCKS_PER_SEC;
 }
 
 void testTriInsertSeq(TABLEAU t, int tabSize){
@@ -52,6 +63,7 @@ void testTriInsertSeq(TABLEAU t, int tabSize){
 void ExecuteBenchmark(void)
 {
     TABLEAU t;
+    float result = 0.0;
     /*for(int i = 0; i < 14; ++i){
         testTriInsertSeq(t, Ksizes[i]);
         testTriRapide(t, Ksizes[i]);
@@ -59,5 +71,6 @@ void ExecuteBenchmark(void)
     
     }*/
     GenerateRandTab(t, Ksizes[0]);
-    testTriBulles(t, Ksizes[0]);
+    result = testTriBulles(t, Ksizes[6]);
+    printf("TriBulle effectué en %f secondes", result);
 }
