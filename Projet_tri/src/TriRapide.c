@@ -1,5 +1,5 @@
 //
-//  ProjetTri.c
+//  TriRapide.c
 //  Tri
 //
 //  Created by Anthony Bertrant on 21/09/2016.
@@ -14,7 +14,9 @@ typedef int TABLEAU[MAX];
 
 
 int partition(TABLEAU t, int left, int right){
-    //int pivot,i, j, k;
+    /*spec: placer un élément du tableau (appelé pivot) à sa place définitive, en permutant 
+     tous les éléments de telle sorte que tous ceux qui sont inférieurs 
+     au pivot soient à sa gauche et que tous ceux qui sont supérieurs au pivot soient à sa droite. */
     int pivot, i, j;
     pivot = t[left];
     i = left; j = right+1;
@@ -26,10 +28,8 @@ int partition(TABLEAU t, int left, int right){
         if(i >= j) break;
         
         Swap(t, i, j);
-        //k = t[i]; t[i] = t[j]; t[j] = k;
     }
     Swap(t, left, j);
-    //k = t[left]; t[left] = t[j]; t[j] = k;
 
     return j;
 }

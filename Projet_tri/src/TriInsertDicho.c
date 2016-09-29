@@ -12,6 +12,7 @@
 typedef int TABLEAU[MAX];
 
 void translation(int p, int i, TABLEAU t){
+    /*spec: translation de t[p...i-1] vers t[p+1...i] */
     int j;
     for(j = i-1; p <= j; j--){
         t[j+1] = t[j];
@@ -19,6 +20,7 @@ void translation(int p, int i, TABLEAU t){
 }
 
 int position_dicho(int i,TABLEAU t){
+    /*spec: calcul de la position par dichotomie*/
     int g,d,m;
     g = 0;
     d = i;
@@ -34,6 +36,7 @@ int position_dicho(int i,TABLEAU t){
 }
 
 void TriInsertDicho(TABLEAU t, int tabSize){
+    /*spec: tri du tableau t par insertion dichotomique */
     int i,p,x;
     for(i = 1; i < tabSize; i++){
         p = position_dicho(i,t);
