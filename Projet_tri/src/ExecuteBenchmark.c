@@ -16,7 +16,7 @@ const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,
                         700000, 800000, 900000, 1000000};
 
 void afficherTableau(TABLEAU t, int tabSize){
-    for(int i = 0; i < tabSize - 1; i++){
+    for(int i = 0; i < tabSize; ++i){
         printf(" %d ", t[i]);
     }
 }
@@ -182,7 +182,7 @@ void ExecuteBenchmark(void)
     GenerateRandTab(tab, 10);
     afficherTableau(tab, 10);
     printf("\n");
-    TriInsertDicho(tab, 10);
+    TriFusion(tab, 0, 9);
     printf("\n");
     afficherTableau(tab, 10);
     
