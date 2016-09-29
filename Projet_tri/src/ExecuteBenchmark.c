@@ -16,6 +16,7 @@ const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,
                         700000, 800000, 900000, 1000000};
 
 void afficherTableau(TABLEAU t, int tabSize){
+    /*Spec: affiche le contenu d'un tableau passé en parametre avec sa taille */
     for(int i = 0; i < tabSize; ++i){
         printf(" %d ", t[i]);
     }
@@ -126,7 +127,7 @@ void testTriInsertDicho(TABLEAU t, int tabSize){
     for(int i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
-        testTriInsertDicho(t, tabSize);
+        TriInsertDicho(t, tabSize);
         fin = clock();
         
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
@@ -146,7 +147,7 @@ void testTriFusion(TABLEAU t, int tabSize){
     float result = 0.0;
     printf("debut test algo Fusion pr taille %d\n", tabSize);
 
-    /*for(int i = 0; i < 20; ++i){
+    for(int i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriFusion(t, 0, tabSize-1);
@@ -156,10 +157,7 @@ void testTriFusion(TABLEAU t, int tabSize){
         
         printf("fin test N°%d\n", i+1);
         
-    }*/
-    
-    printf("\n");
-    TriFusion(t, 0, tabSize-1);
+    }
 
     result = (result / 20);
     printf("fin test pour taille %d\n", tabSize);
@@ -170,20 +168,18 @@ void testTriFusion(TABLEAU t, int tabSize){
 
 void ExecuteBenchmark(void)
 {
-    //TABLEAU t;
-    float result = 0.0;
+    TABLEAU t;
     
-    /*for(int i = 0; i < 15; ++i){
+    for(int i = 0; i < 5; ++i){
         GenerateRandTab(t, Ksizes[i]);
+        
         testTriFusion(t, Ksizes[i]);
-    }*/
+        testTriInsertDicho(t, Ksizes[i]);
+        testTriInsertSeq(t, Ksizes[i]);
+        testTriRapide(t,Ksizes[i]);
+        testTriSelecPerm(t, Ksizes[i]);
+        testTriFusion(t, Ksizes[i]);
+    }
 
-    int tab[10];
-    GenerateRandTab(tab, 10);
-    afficherTableau(tab, 10);
-    printf("\n");
-    TriFusion(tab, 0, 9);
-    printf("\n");
-    afficherTableau(tab, 10);
     
 }
