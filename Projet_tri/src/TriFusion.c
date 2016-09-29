@@ -6,6 +6,7 @@
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
 #include <stdio.h>
+#include <stdlib.h>
 #include "TriFusion.h"
 
 #define MAX 1000000
@@ -18,18 +19,23 @@ void Fusion(TABLEAU t, int beg, int middle, int end){
      
             sortie: t[debut...fin] trié
      */
-    int *tmp = (int*) malloc ((middle - beg + 1) * sizeof(int));
+    int *tmp = (int*) malloc((middle - beg + 1)*sizeof(int));
     int i;
-    
-    for (i = beg; i <= middle; ++i) tmp[i - beg] = t[i];
     
     int left = beg;
     int right = middle + 1;
     
-    for (i = beg; i <= end; ++i)
+    for (i = beg; i <= middle; ++i)
     {
-        if (left == middle + 1) break;
-        if (right == end + 1 || tmp[left] <= t[right])
+        tmp[i-beg] = t[i];
+    }
+    for (i = beg; i <= end; i++)
+    {
+        if (left == middle + 1)
+        {
+            break;
+            
+        }else if (right == end+1 || tmp[left-beg] < t[right])
         {
             t[i] = tmp[left - beg];
             ++left;
@@ -40,6 +46,7 @@ void Fusion(TABLEAU t, int beg, int middle, int end){
             ++right;
         }
     }
+    free(tmp);
 }
      
 
@@ -47,7 +54,7 @@ void TriFusion(TABLEAU t, int debut, int fin){
     /*spec: réalise le tri par fusion de t[debut....fin]*/
     if(debut < fin){ /*t[debut...fin] >=2*/
         int m;
-        m = (debut + fin) / 2;
+        m = (debut + fin)/2;
         TriFusion(t, debut, m);
         TriFusion(t, m+1, fin);
         Fusion(t, debut, m, fin);
