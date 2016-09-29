@@ -25,7 +25,7 @@ void Fusion(TABLEAU t, int beg, int middle, int end){
     int left = beg;
     int right = middle + 1;
     
-    for (i = beg; i <= middle; ++i)
+    for (i = beg; i <= middle; i++)
     {
         tmp[i-beg] = t[i];
     }

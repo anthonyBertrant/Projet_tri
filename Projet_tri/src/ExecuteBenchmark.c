@@ -117,6 +117,29 @@ void testTriInsertSeq(TABLEAU t, int tabSize){
     WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
 }
 
+void testTriInsertDicho(TABLEAU t, int tabSize){
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
+    printf("debut test algo insertion seq pr taille %d\n", tabSize);
+    
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        testTriInsertDicho(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        printf("fin test N°%d\n", i+1);
+        
+    }
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
+    
+    WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
+}
+
 void testTriFusion(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
@@ -147,18 +170,20 @@ void testTriFusion(TABLEAU t, int tabSize){
 
 void ExecuteBenchmark(void)
 {
-    TABLEAU t;
+    //TABLEAU t;
     float result = 0.0;
     
     /*for(int i = 0; i < 15; ++i){
         GenerateRandTab(t, Ksizes[i]);
         testTriFusion(t, Ksizes[i]);
     }*/
-    //GenerateRandTab(t, 10);
-    //testTriFusion(t, 10);
-    
-    int tab[] = {12, 6, 1, 8, 2, 4};
-    TriFusion(tab, 0, 5);
-    afficherTableau(tab, 6);
+
+    int tab[10];
+    GenerateRandTab(tab, 10);
+    afficherTableau(tab, 10);
+    printf("\n");
+    TriInsertDicho(tab, 10);
+    printf("\n");
+    afficherTableau(tab, 10);
     
 }
