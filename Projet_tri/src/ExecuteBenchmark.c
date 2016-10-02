@@ -36,6 +36,11 @@ void testTriRapide(TABLEAU t, int tabSize){
         
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
         
+        /*si le resultat total excède 5minutes, le test est coupé*/
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
         printf("fin test N°%d\n", i+1);
         
     }
@@ -61,6 +66,12 @@ void testTriSelecPerm(TABLEAU t, int tabSize){
         
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
         
+        /*si le resultat total excède 5minutes, le test est coupé*/
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
+        
         printf("fin test N°%d\n", i+1);
         
     }
@@ -84,8 +95,12 @@ void testTriBulles(TABLEAU t, int tabSize){
         TriBulles(t, tabSize);
         fin = clock();
         
+        /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
         printf("fin test N°%d\n", i+1);
 
     }
@@ -107,8 +122,12 @@ void testTriInsertSeq(TABLEAU t, int tabSize){
         TriInsertSeq(t, tabSize);
         fin = clock();
         
+        /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
         printf("fin test N°%d\n", i+1);
         
     }
@@ -130,11 +149,15 @@ void testTriInsertDicho(TABLEAU t, int tabSize){
         TriInsertDicho(t, tabSize);
         fin = clock();
         
+        /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
         printf("fin test N°%d\n", i+1);
-        
     }
+    
     result = (result / 20);
     printf("fin test pour taille %d\n", tabSize);
     
@@ -153,10 +176,13 @@ void testTriFusion(TABLEAU t, int tabSize){
         TriFusion(t, 0, tabSize-1);
         fin = clock();
         
+        /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
         printf("fin test N°%d\n", i+1);
-        
     }
 
     result = (result / 20);
@@ -172,8 +198,7 @@ void ExecuteBenchmark(void)
     
     for(int i = 0; i < 5; ++i){
         GenerateRandTab(t, Ksizes[i]);
-        
-        testTriFusion(t, Ksizes[i]);
+        testTriBulles(t, Ksizes[i]);
         testTriInsertDicho(t, Ksizes[i]);
         testTriInsertSeq(t, Ksizes[i]);
         testTriRapide(t,Ksizes[i]);
