@@ -1,28 +1,70 @@
 //
-//  ProjetTri.c
+//  util.c
 //  Tri
 //
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
-#include <stdio.h>
-#include <stdlib.h>
+#include "util.h"
 #include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 
+#define MAX 1000000
+typedef int TABLEAU[MAX];
 
-int[] CreateRandTab(int Taille){
-    
+void GenerateRandTab(TABLEAU t, int tabSize){
+   /*Specification: la fonction rempli le tableau d'entier aléatoire pour 
+    une taille donnée*/
+    int x = tabSize + 300;
+    srand(time(NULL));
+    for(int i = 0; i < tabSize; ++i){
+        t[i] = (rand() % x);
+    }
 }
 
-void WriteResultInFile(int result, const char *filename){
+void WriteResultInFile(float result, int taille, const char *filename){
+    /*Specification: La fonction ecris dans un fichier .csv les informations <result> et
+     <taille> pour un fichier <filename> donné. Si le fichier existe deja, il est complété
+     sinon, il est crée.*/
     
-    File* file = NULL;
-    file = fopen(filename, "a");
     
-    if(fichier != NULL){
+    if( access( filename, F_OK ) != -1 ) {
+        // file exists
+        FILE* file = NULL;
+        file = fopen(filename, "a");
+        fprintf(file, "%d;%f \n",taille,result);
+        fclose(file);
+    } else {
+        // file doesn't exist
+        FILE* file = NULL;
+        file = fopen(filename, "a");
         
-    }else {
-        printf("Impossible d'ouvrir le fichier %s", filename);
+        if(file != NULL){
+            fprintf(file, "%s","Taille; Resultat en seconde\n");
+            fprintf(file, "%d;%f \n",taille,result);
+            fclose(file);
+        
+        }else {
+            printf("Impossible d'ouvrir le fichier %s", filename);
+        }
+    }
+}
+
+void Swap(TABLEAU t, int index1, int index2){
+    /*spec: la fonction permet de permutter deux elements d'un tableau*/
+    
+    int tmp;
+    tmp = t[index1];
+    t[index1] = t[index2];
+    t[index2] = tmp;
+}
+
+void afficherTableau(TABLEAU t, int tabSize){
+    /*Spec: affiche le contenu d'un tableau passé en parametre avec sa taille */
+    for(int i = 0; i < tabSize; ++i){
+        printf(" %d ", t[i]);
     }
 }
 
