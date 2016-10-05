@@ -12,7 +12,7 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void Fusion(TABLEAU t, int g, int m, int d){
+void Fusion (TABLEAU t, int g, int m, int d){
     /*spec: entrée: 0 <= debut <= pivot < fin <= taille -1
                     t[debut...pivot] trié
                     t[pivot+1...fin] trié
@@ -45,7 +45,7 @@ void Fusion(TABLEAU t, int g, int m, int d){
 }
      
 
-void TriFusion(TABLEAU t, int debut, int fin){
+void TriFusionRecurs(TABLEAU t, int debut, int fin){
     /*spec: réalise le tri par fusion de t[debut....fin]*/
     if(debut < fin){ /*t[debut...fin] >=2*/
         int m;
@@ -54,5 +54,8 @@ void TriFusion(TABLEAU t, int debut, int fin){
         TriFusion(t, m+1, fin);
         Fusion(t, debut, m, fin);
     }
+}
 
+void TriFusion(TABLEAU t, int tabSize) {
+	TriFusionRecurs(t, 0, tabSize);
 }
