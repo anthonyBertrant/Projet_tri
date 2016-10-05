@@ -34,7 +34,7 @@ int partition(TABLEAU t, int left, int right){
     return j;
 }
 
-void TriRapide(TABLEAU t, int left, int right){
+void TriRapideRecurs(TABLEAU t, int left, int right){
     /*spec: prend en entrée un tableau t a trié, un indice de debut de tri et un 
      indice de fin de trie.
      sortie: void (tableau trié)
@@ -48,4 +48,8 @@ void TriRapide(TABLEAU t, int left, int right){
         TriRapide(t, left, j-1);
         TriRapide(t, j+1, right);
     }   
+}
+
+void TriRapide(TABLEAU t, int tabSize){
+	TriRapideRecurs(t, 0, tabSize);
 }

@@ -14,15 +14,16 @@
 int main()
 {
 	t_flags functions[]= {
-	   {"TriBulles", &TriBulles},
-	   {"TriInsertSeq", &TriInsertSeq}, 
+		{"TriFusion", &TriFusion},	
+	    {"TriBulles", &TriBulles},
+	    {"TriInsertSeq", &TriInsertSeq}, 
 	};
 
 	int i = 0;
 	while (i < TAB_SIZE(flags))
 	{
 		ExecuteBenchmark(functions[i]);
-		i++;
+		++i;
 	}
 	
 	return(0);

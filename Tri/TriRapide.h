@@ -4,6 +4,7 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
-void TriRapide(TABLEAU t,int begin, int end);
+void TriRapideRecurs(TABLEAU t, int begin, int end);
+void TriRapide(TABLEAU t, int tabSize);
 
 #endif
