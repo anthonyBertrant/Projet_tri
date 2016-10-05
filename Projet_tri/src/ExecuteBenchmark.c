@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "util.h"
 #include <stdio.h>
 #include "TriInsertSeq.h"
@@ -191,20 +193,48 @@ void testTriFusion(TABLEAU t, int tabSize){
     WriteResultInFile(result, tabSize, "TriFusion.csv");
 }
 
+void testTriTas(TABLEAU t, int tabSize){
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
+    printf("debut test algo Tas pr taille %d\n", tabSize);
+    
+    for(int i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriTas(t, tabSize);
+        fin = clock();
+        
+        /*si le resultat total excède 5minutes, le test est coupé*/
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        if( result >= 300000){
+            result = 300000;
+            break;
+        }
+        printf("fin test N°%d\n", i+1);
+    }
+    
+    result = (result / 20);
+    printf("fin test pour taille %d\n", tabSize);
+    
+    WriteResultInFile(result, tabSize, "TriTas.csv");
+}
+
 
 void ExecuteBenchmark(void)
 {
+    //TABLEAU t = {88, 248, 258, 243, 253, 70, 146, 97, 180, 224};
     TABLEAU t;
-    
-    for(int i = 0; i < 5; ++i){
-        GenerateRandTab(t, Ksizes[i]);
-        testTriBulles(t, Ksizes[i]);
-        testTriInsertDicho(t, Ksizes[i]);
-        testTriInsertSeq(t, Ksizes[i]);
-        testTriRapide(t,Ksizes[i]);
-        testTriSelecPerm(t, Ksizes[i]);
-        testTriFusion(t, Ksizes[i]);
-    }
 
+    for(int i = 0; i < 14; ++i){
+        GenerateRandTab(t, Ksizes[i]);
+        //testTriBulles(t, Ksizes[i]);
+        //testTriInsertDicho(t, Ksizes[i]);
+        //testTriInsertSeq(t, Ksizes[i]);
+        testTriRapide(t,Ksizes[i]);
+        //testTriSelecPerm(t, Ksizes[i]);
+        testTriFusion(t, Ksizes[i]);
+        testTriTas(t, Ksizes[i]);
+    }
     
 }
