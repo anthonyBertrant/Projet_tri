@@ -1,5 +1,5 @@
 //
-//  ProjetTri.c
+//  TriInsertSeq.c
 //  Tri
 //
 //  Created by Anthony Bertrant on 21/09/2016.
