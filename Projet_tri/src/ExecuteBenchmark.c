@@ -215,11 +215,9 @@ void testTriTas(TABLEAU t, int tabSize){
     int i;
     
     printf("debut test algo Tas pr taille %d\n", tabSize);
-    GenerateRandTab(t, tabSize);
 
     for(int i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
-        afficherTableau(t, tabSize);
         debut = clock();
         TriTas(t, tabSize);
         fin = clock();
