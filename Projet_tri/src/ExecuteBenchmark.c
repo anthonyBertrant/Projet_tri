@@ -1,16 +1,17 @@
-#include "util.h"
 #include <stdio.h>
+#include <time.h>
 #include <stdlib.h>
+#include "util.h"
+
+#include "ExecuteBenchmark.h"
 #include "TriInsertSeq.h"
 #include "TriBulles.h"
 #include "TriSelecPerm.h"
 #include "TriRapide.h"
-#include "ExecuteBenchmark.h"
 #include "TriInsertDicho.h"
 #include "TriFusion.h"
 #include "TriArbreBin.h"
 #include "TriTas.h"
-#include <time.h>
 
 
 const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,

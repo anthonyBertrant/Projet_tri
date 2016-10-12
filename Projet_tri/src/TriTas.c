@@ -8,11 +8,9 @@
 #include <stdio.h>
 #include "TriTas.h"
 #include "util.h"
-#include "ExecuteBenchmark.h"
 
 #define MAX 1000000
 typedef int TABLEAU[MAX];
-
 
 void descendre(TABLEAU t, int d, int f){
     int fg, fd, fm;
