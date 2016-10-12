@@ -14,6 +14,11 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
+int tab[15] = {5, 500, 5000, 10000, 50000, 100000,
+    200000, 300000, 400000, 500000, 600000,
+    700000, 800000, 900000, 1000000};
+
+
 
 void GenerateRandTab(TABLEAU t, int tabSize){
    /*Specification: la fonction rempli le tableau d'entier aléatoire pour 

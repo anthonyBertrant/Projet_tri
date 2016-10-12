@@ -28,9 +28,10 @@ void testTriRapide(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
+    int i;
     printf("debut test algo rapide pr taille %d\n", tabSize);
 
-    for(int i = 0; i < 20; ++i){
+    for(i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriRapide(t, 0, tabSize-1);
@@ -39,14 +40,15 @@ void testTriRapide(TABLEAU t, int tabSize){
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
         
         /*si le resultat total excède 5minutes, le test est coupé*/
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
         printf("fin test N°%d\n", i+1);
         
     }
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
 
     
@@ -58,9 +60,11 @@ void testTriSelecPerm(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
+    int i;
+    
     printf("debut test algo selec perm pr taille %d\n", tabSize);
 
-    for(int i = 0; i < 20; ++i){
+    for(i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriSelecPerm(t, tabSize);
@@ -69,15 +73,15 @@ void testTriSelecPerm(TABLEAU t, int tabSize){
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
         
         /*si le resultat total excède 5minutes, le test est coupé*/
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
-        
         printf("fin test N°%d\n", i+1);
         
     }
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
     
     WriteResultInFile(result, tabSize, "TriSelecPerm.csv");
@@ -90,8 +94,9 @@ void testTriBulles(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
-
-    for(int i = 0; i < 20; ++i){
+    int i;
+    
+    for(i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriBulles(t, tabSize);
@@ -99,14 +104,15 @@ void testTriBulles(TABLEAU t, int tabSize){
         
         /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
         printf("fin test N°%d\n", i+1);
 
     }
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
 
     WriteResultInFile(result, tabSize, "TriBulles.csv");
@@ -116,9 +122,11 @@ void testTriInsertSeq(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
+    int i;
+    
     printf("debut test algo insertion seq pr taille %d\n", tabSize);
 
-    for(int i = 0; i < 20; ++i){
+    for(i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriInsertSeq(t, tabSize);
@@ -126,14 +134,15 @@ void testTriInsertSeq(TABLEAU t, int tabSize){
         
         /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
         printf("fin test N°%d\n", i+1);
         
     }
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
     
     WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
@@ -143,9 +152,11 @@ void testTriInsertDicho(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
-    printf("debut test algo insertion seq pr taille %d\n", tabSize);
+    int i;
     
-    for(int i = 0; i < 20; ++i){
+    printf("debut test algo insertion dichotomique pr taille %d\n", tabSize);
+    
+    for(i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriInsertDicho(t, tabSize);
@@ -153,14 +164,15 @@ void testTriInsertDicho(TABLEAU t, int tabSize){
         
         /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
         printf("fin test N°%d\n", i+1);
     }
     
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
     
     WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
@@ -170,9 +182,11 @@ void testTriFusion(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
+    int i;
+    
     printf("debut test algo Fusion pr taille %d\n", tabSize);
 
-    for(int i = 0; i < 20; ++i){
+    for(i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
         TriFusion(t, 0, tabSize-1);
@@ -180,14 +194,15 @@ void testTriFusion(TABLEAU t, int tabSize){
         
         /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
         printf("fin test N°%d\n", i+1);
     }
 
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
     
     WriteResultInFile(result, tabSize, "TriFusion.csv");
@@ -197,6 +212,8 @@ void testTriTas(TABLEAU t, int tabSize){
     clock_t debut;
     clock_t fin;
     float result = 0.0;
+    int i;
+    
     printf("debut test algo Tas pr taille %d\n", tabSize);
     
     for(int i = 0; i < 20; ++i){
@@ -207,14 +224,15 @@ void testTriTas(TABLEAU t, int tabSize){
         
         /*si le resultat total excède 5minutes, le test est coupé*/
         result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
-        if( result >= 300000){
-            result = 300000;
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
             break;
         }
         printf("fin test N°%d\n", i+1);
     }
     
-    result = (result / 20);
+    result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
     
     WriteResultInFile(result, tabSize, "TriTas.csv");
@@ -227,12 +245,11 @@ void ExecuteBenchmark(void)
     TABLEAU t;
 
     for(int i = 0; i < 14; ++i){
-        GenerateRandTab(t, Ksizes[i]);
-        //testTriBulles(t, Ksizes[i]);
-        //testTriInsertDicho(t, Ksizes[i]);
-        //testTriInsertSeq(t, Ksizes[i]);
+        testTriBulles(t, Ksizes[i]);
+        testTriInsertDicho(t, Ksizes[i]);
+        testTriInsertSeq(t, Ksizes[i]);
         testTriRapide(t,Ksizes[i]);
-        //testTriSelecPerm(t, Ksizes[i]);
+        testTriSelecPerm(t, Ksizes[i]);
         testTriFusion(t, Ksizes[i]);
         testTriTas(t, Ksizes[i]);
     }

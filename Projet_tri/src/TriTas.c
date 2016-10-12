@@ -30,23 +30,9 @@ void descendre(TABLEAU t, int d, int f){
 }
 
 void organiserTas(TABLEAU t, int n ){
-
-    /*for(int i = 2; i < n+1; ++i){
-        int k = i;
-        while(k != 1){
-        
-            if(t[k-1] > t[k/2-1]){
-                Swap(t, (k/2 - 1), (k-1));
-                afficherTableau(t,10);
-                printf("\n");
-            }
-            k = k/2;
-        }
-    }*/
     for(int i = 2; i < n; ++i){
         int k = i + 1;
         while(k != 1){
-            
             if(t[k-1] > t[k/2-1]){
                 Swap(t, (k/2 - 1), (k-1));
             }

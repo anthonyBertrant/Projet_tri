@@ -27,4 +27,15 @@ Echange les valeurs présentes dans le tableau passé en paramètre aux indices 
 */
 
 
+/*---------EN ATTENTE----------------------------------------
+ 
+ void CreateFinalResultFile(void);
+/*Specifications:
+ Crée un fichier final qui contient tous les resultas des tests. Peut etre utiliser comme fichier de 
+ synthèse pour creer des graphiques ou des tableaud de synthese de donnée, en plus des fichiers separés 
+ des algorithmes
+ -Entrée: void
+ -Sortie: un fihcier .csv
+
+------------------------------------------------------------*/
 #endif
