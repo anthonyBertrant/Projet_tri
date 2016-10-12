@@ -1,7 +1,6 @@
-#include <stdio.h>
-
 #include "util.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include "TriInsertSeq.h"
 #include "TriBulles.h"
 #include "TriSelecPerm.h"
@@ -11,7 +10,8 @@
 #include "TriFusion.h"
 #include "TriArbreBin.h"
 #include "TriTas.h"
-#include "time.h"
+#include <time.h>
+
 
 const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,
                         200000, 300000, 400000, 500000, 600000,
@@ -215,9 +215,11 @@ void testTriTas(TABLEAU t, int tabSize){
     int i;
     
     printf("debut test algo Tas pr taille %d\n", tabSize);
-    
+    GenerateRandTab(t, tabSize);
+
     for(int i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
+        afficherTableau(t, tabSize);
         debut = clock();
         TriTas(t, tabSize);
         fin = clock();
@@ -243,6 +245,7 @@ void ExecuteBenchmark(void)
 {
     //TABLEAU t = {88, 248, 258, 243, 253, 70, 146, 97, 180, 224};
     TABLEAU t;
+    srand(time(NULL)); //on plante la graine ici pour une generation aleatoire
 
     for(int i = 0; i < 14; ++i){
         testTriBulles(t, Ksizes[i]);

@@ -24,7 +24,7 @@ void GenerateRandTab(TABLEAU t, int tabSize){
    /*Specification: la fonction rempli le tableau d'entier aléatoire pour 
     une taille donnée*/
     int x = tabSize + 300;
-    srand(time(NULL));
+    //srand(time(NULL));
     for(int i = 0; i < tabSize; ++i){
         t[i] = (rand() % x);
     }

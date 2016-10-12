@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include "TriTas.h"
 #include "util.h"
+#include "ExecuteBenchmark.h"
 
 #define MAX 1000000
 typedef int TABLEAU[MAX];
@@ -29,7 +30,7 @@ void descendre(TABLEAU t, int d, int f){
     }
 }
 
-void organiserTas(TABLEAU t, int n ){
+/*void organiserTas(TABLEAU t, int n ){
     for(int i = 2; i < n; ++i){
         int k = i + 1;
         while(k != 1){
@@ -39,6 +40,11 @@ void organiserTas(TABLEAU t, int n ){
             k = k/2;
         }
     }
+}*/
+
+void organiserTas(TABLEAU t, int tabSize){
+    for(int i = tabSize/2;  i>= 0; --i)
+        descendre(t, i, tabSize);
 }
 
 void TriTas(TABLEAU t, int tabSize){
@@ -46,6 +52,5 @@ void TriTas(TABLEAU t, int tabSize){
     for( int i = tabSize-1; i != 0; --i ){
         Swap(t,0, i);
         descendre(t, 0, i);
-    }
-    
+    }    
 }
