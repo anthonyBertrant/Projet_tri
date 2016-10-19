@@ -17,12 +17,13 @@ typedef struct node {
   struct node *right;
 } node;
 
-void afficherArbre(node *tree)
+void remplirTableau(TABLEAU t, int i, node *tree)
 {
   if(!tree) return;
-  if (tree->left)  afficherArbre(tree->left);
-  printf("Cle = %d\n", tree->value);
-  if (tree->right) afficherArbre(tree->right);
+  if (tree->left) remplirTableau(t, i, tree->left);
+  t[i] = tree->value;
+  ++i;
+  if (tree->right) remplirTableau(t, i, tree->right);
 }
 
 void addNode(node **tree, int value)
@@ -70,6 +71,6 @@ node* construireArbre(TABLEAU t, int size)
 void TriArbreBin(TABLEAU t, int size)
 {
   node *arbre = construireArbre(t, size);
-  afficherArbre(arbre);
+  remplirTableau(t, 0, arbre);
 }
 
