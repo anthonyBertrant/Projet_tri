@@ -8,15 +8,6 @@
 #include <stdio.h>
 #include "TriArbreBin.h"
 
-#define MAX 1000000
-typedef int TABLEAU[MAX];
-
-typedef struct node {
-  int value;
-  struct node *left;
-  struct node *right;
-} node;
-
 void afficherArbre(node *tree)
 {
   if(!tree) return;
