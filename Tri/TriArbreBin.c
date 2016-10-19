@@ -28,6 +28,7 @@ void afficherArbre(node *tree)
 void addNode(node **tree, int value)
 { 
   node *tmpTree = *tree;
+  node *tmpNode;
   
   node *elem = malloc(sizeof(node));
   elem->value = value;
@@ -36,7 +37,7 @@ void addNode(node **tree, int value)
   
   if (tmpTree == NULL)
   {
-    tree = elem;
+    *tree = elem;
   }
   else
     while (tmpTree)
@@ -53,7 +54,6 @@ void addNode(node **tree, int value)
           if(!tmpTree) tmpNode->left = elem;
       }
     }
-  }
 }
 
 node* construireArbre(TABLEAU t, int size)
@@ -69,7 +69,7 @@ node* construireArbre(TABLEAU t, int size)
 
 void TriArbreBin(TABLEAU t, int size)
 {
-  node *arbre = construireArbre(TABLEAU t, int size);
+  node *arbre = construireArbre(t, size);
   afficherArbre(arbre);
 }
 
