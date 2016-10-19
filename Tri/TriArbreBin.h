@@ -4,6 +4,12 @@
 #define MAX 1000000
 typedef int TABLEAU[MAX];
 
+typedef struct node {
+  int value;
+  struct node *left;
+  struct node *right;
+} node;
+
 /*
   Affiche le contenu trié d'un arbre binaire de recherche.
     -en entrée: l'arbre à afficher.
