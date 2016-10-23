@@ -1,9 +1,23 @@
-#ifndef HEADERFILE_H
-#define HEADERFILE_H
+#ifndef TRITAS_H
+#define TRITAS_H
 
-#define MAX 1000000
+#include <stdio.h>
+
+#define MAX 100000
 typedef int TABLEAU[MAX];
 
-void TriTas(TABLEAU t);
+void TriTas(TABLEAU t, size_t tabSize);
+/*effectue le trie sur un tas. le tas est un tableau passer en parametre*/
+
+void organiserTas(TABLEAU t, int n);
+/* On organise un tableau en tas, pour cela
+ on dois descendre tous les éléments, en partant du milieu, vers le début*/
+
+void descendre(TABLEAU t, int d, int f);
+/*Descendre permet de réorganiser un tas dont la racine n'est pas à sa place.
+ La racine se trouve à l'indice d. f est le depart de la descente
+ Pour des exemples, voir TriTas tout en bas*/
+
+
 
 #endif

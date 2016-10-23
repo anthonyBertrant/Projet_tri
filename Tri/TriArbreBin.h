@@ -1,7 +1,9 @@
-#ifndef HEADERFILE_H
-#define HEADERFILE_H
+#ifndef TRIARBREBIN_H
+#define TRIARBREBIN_H
 
-#define MAX 1000000
+#include <stdio.h>
+
+#define MAX 100000
 typedef int TABLEAU[MAX];
 
 typedef struct node {
@@ -11,29 +13,29 @@ typedef struct node {
 } node;
 
 /*
-  Affiche le contenu triÃ© d'un arbre binaire de recherche.
-    -en entrÃ©e: l'arbre Ã  afficher.
+  Affiche le contenu trié d'un arbre binaire de recherche.
+    -en entrée: l'arbre à afficher.
 */
 void afficherArbre(node *tree);
 
 /*
-  Ajoute un noeud Ã  un arbre binaire de recherche.
-    -en entrÃ©e: un pointeur sur l'arbre et la valeur du noeud Ã  ajouter.
-    -en sortie: le noeud a Ã©tÃ© ajoutÃ© Ã  l'arbre en respectant le principe de l'arbre binaire de recherche.
+  Ajoute un noeud à un arbre binaire de recherche.
+    -en entrée: un pointeur sur l'arbre et la valeur du noeud à ajouter.
+    -en sortie: le noeud a été ajouté à l'arbre en respectant le principe de l'arbre binaire de recherche.
 */
 void ajouterNoeud(node **tree, int value);
 
 /*
-  Construit un arbre binaire de recherche Ã  partir d'un tableau.
-    -en entrÃ©e: un tableau d'entier et sa taille.
+  Construit un arbre binaire de recherche à partir d'un tableau.
+    -en entrée: un tableau d'entier et sa taille.
     -en sortie: un pointeur sur la racine de l'arbre.
 */
-node* construireArbre(TABLEAU t, int size);
+node* construireArbre(TABLEAU t, size_t size);
 
 /*
-  Tri un tableau Ã  l'aide d'un arbre binaire de recherche.
-    -en entrÃ©e: le tableau Ã  trier et sa taille.
+  Tri un tableau à l'aide d'un arbre binaire de recherche.
+    -en entrée: le tableau à trier et sa taille.
 */
-void TriArbreBin(TABLEAU t, int size);
+void TriArbreBin(TABLEAU t, size_t tabSize);
 
 #endif
