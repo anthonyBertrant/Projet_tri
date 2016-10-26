@@ -82,6 +82,7 @@ void ExecuteBenchmarks(t_flags algoTri)
 int main()
 {
     t_flags functions[]= {
+        {"Tri par Insertion Sequentielle (FIFO)", &TriInsertSeqFIFO},
         {"Tri Fusion", &TriFusion},
         {"Tri Rapide", &TriRapide},
         {"Tri a Bulles", &TriBulles},
