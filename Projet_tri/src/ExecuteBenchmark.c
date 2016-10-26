@@ -88,6 +88,39 @@ void testTriSelecPerm(TABLEAU t, int tabSize){
     WriteResultInFile(result, tabSize, "TriSelecPerm.csv");
 }
 
+void testTriArbreBin(TABLEAU t, int tabSize){
+    /*spec: fais 20fois le test de trie de l'algorithme, puis ecris la moyenne d'execution*/
+    clock_t debut;
+    clock_t fin;
+    float result = 0.0;
+    int i;
+    
+    printf("debut test algo arbre pr taille %d\n", tabSize);
+    
+    for(i = 0; i < 20; ++i){
+        GenerateRandTab(t, tabSize);
+        debut = clock();
+        TriArbreBin(t, tabSize);
+        fin = clock();
+        
+        result += (fin - debut) * 1.0/CLOCKS_PER_SEC;
+        
+        /*si le resultat total excède 5minutes, le test est coupé*/
+        if( result >= 300.0){
+            result = 300.0;
+            printf("ARRET TEST: TEMPS OUT !\n");
+            break;
+        }
+        printf("fin test N°%d\n", i+1);
+        
+    }
+    result = (result / i);
+    printf("fin test pour taille %d\n", tabSize);
+    
+    WriteResultInFile(result, tabSize, "TriArbreBin.csv");
+}
+
+
 void testTriBulles(TABLEAU t, int tabSize){
     /*spec: fais 20fois le test de trie de l'algorithme, puis ecris la moyenne d'execution*/
     printf("debut test algo bulles pr taille %d\n", tabSize);
@@ -176,7 +209,7 @@ void testTriInsertDicho(TABLEAU t, int tabSize){
     result = (result / i);
     printf("fin test pour taille %d\n", tabSize);
     
-    WriteResultInFile(result, tabSize, "TriInsertSeq.csv");
+    WriteResultInFile(result, tabSize, "TriInsertDicho.csv");
 }
 
 void testTriFusion(TABLEAU t, int tabSize){
@@ -220,6 +253,7 @@ void testTriTas(TABLEAU t, int tabSize){
     for(int i = 0; i < 20; ++i){
         GenerateRandTab(t, tabSize);
         debut = clock();
+        
         TriTas(t, tabSize);
         fin = clock();
         
@@ -246,14 +280,17 @@ void ExecuteBenchmark(void)
     TABLEAU t;
     srand(time(NULL)); //on plante la graine ici pour une generation aleatoire
 
-    for(int i = 0; i < 14; ++i){
+    for(int i = 0; i < 15; ++i){
         testTriBulles(t, Ksizes[i]);
         testTriInsertDicho(t, Ksizes[i]);
         testTriInsertSeq(t, Ksizes[i]);
-        testTriRapide(t,Ksizes[i]);
         testTriSelecPerm(t, Ksizes[i]);
-        testTriFusion(t, Ksizes[i]);
-        testTriTas(t, Ksizes[i]);
+
+        //testTriRapide(t,Ksizes[i]);
+        //testTriFusion(t, Ksizes[i]);
+        //testTriTas(t, Ksizes[i]);
+        //testTriArbreBin(t, Ksizes[i]);
+
     }
     
 }
