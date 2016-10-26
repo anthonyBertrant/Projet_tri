@@ -27,10 +27,15 @@ const int Ksizes[15] = {5, 500, 5000, 10000, 50000, 100000,
                         200000, 300000, 400000, 500000, 600000,
                         700000, 800000, 900000, 1000000};
 
-
+/* specification:
+Execute la fonction de tri passé en parametre et renvoie le temps d'execution
+en secondes.
+	-en entree: Le tableau non trié, sa taille et le pointeur sur la fonction de tri.
+	-en sortie: le temps d'execution de l'algorithme en seconde.
+*/
 float TestTri (TABLEAU t, size_t tabSize, pf algoTri)
 {
-	clock_t debut;
+    clock_t debut;
     clock_t fin;
     float result = 0.0;
     int i;
@@ -52,7 +57,12 @@ float TestTri (TABLEAU t, size_t tabSize, pf algoTri)
     return (result / i);
 }
 
-
+/* specification:
+Lance les tests d'un algorithme de tri sur un tableau de valeurs aleatoires.
+Et ce pour chaque taille définie dans Ksizes.
+	-en entree: L'algorithme de tri.
+	-en sortie: un fichier .csv contenant les résultats des tests.
+*/
 void ExecuteBenchmarks(t_flags algoTri)
 {
     TABLEAU t;
@@ -98,7 +108,6 @@ int main()
 		ExecuteBenchmarks(functions[i]);
 		++i;
 	}
-
-    system("pause");
+	
 	return 0;
 }
