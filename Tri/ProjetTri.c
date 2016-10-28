@@ -41,7 +41,9 @@ float TestTri (TABLEAU t, size_t tabSize, pf algoTri)
     int i;
 
     printf("execution des tests\n");
-    for(i = 0; i < 20; ++i){
+    for(i = 0; i < 20; ++i) {
+	GenerateRandTab(t, tabSize);
+	
         debut = clock();
         (*algoTri)(t, tabSize);
         fin = clock();
@@ -78,13 +80,10 @@ void ExecuteBenchmarks(t_flags algoTri)
     printf("==> DEBUT %s\n\n", algoTri);
     for(size_t i = 0; i < 5; ++i){
         size = Ksizes[i];
-        GenerateRandTab(t, size);
-
         printf("- taille = %d\n", size);
-		result = TestTri(t, size, algoTri.pf);
-		printf("\n- fin pour taille %d\t\ttmps = %.2f\n\n", size, result);
-
-		WriteResultInFile(result, size, filename);
+	result = TestTri(t, size, algoTri.pf);
+	printf("\n- fin pour taille %d\t\ttmps = %.2f\n\n", size, result);
+	WriteResultInFile(result, size, filename);
     }
     printf("==> FIN %s\n\n", algoTri);
 }
@@ -92,7 +91,7 @@ void ExecuteBenchmarks(t_flags algoTri)
 int main()
 {
     t_flags functions[]= {
-        {"Tri par Insertion Sequentielle (FIFO)", &TriInsertSeqFIFO},
+        //{"Tri par Insertion Sequentielle (FIFO)", &TriInsertSeqFIFO},
         {"Tri Fusion", &TriFusion},
         {"Tri Rapide", &TriRapide},
         {"Tri a Bulles", &TriBulles},
