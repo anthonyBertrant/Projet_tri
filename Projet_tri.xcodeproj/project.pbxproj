@@ -52,7 +52,7 @@
 		926776041D93178B00D5435C /* TriSelecPerm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriSelecPerm.c; sourceTree = "<group>"; };
 		926776051D93178B00D5435C /* TriTas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TriTas.c; sourceTree = "<group>"; };
 		926776061D93178B00D5435C /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
-		926776131D931D5400D5435C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = Projet_tri/.gitignore; sourceTree = "<group>"; };
+		926776131D931D5400D5435C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,6 @@
 		926775DD1D93176500D5435C = {
 			isa = PBXGroup;
 			children = (
-				926776131D931D5400D5435C /* .gitignore */,
 				926775E81D93176600D5435C /* Projet_tri */,
 				926775E71D93176600D5435C /* Products */,
 			);
@@ -86,6 +85,7 @@
 		926775E81D93176600D5435C /* Projet_tri */ = {
 			isa = PBXGroup;
 			children = (
+				926776131D931D5400D5435C /* .gitignore */,
 				926775F01D93178B00D5435C /* inc */,
 				926775FB1D93178B00D5435C /* src */,
 			);
