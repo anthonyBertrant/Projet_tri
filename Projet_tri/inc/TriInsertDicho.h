@@ -1,10 +1,12 @@
-#ifndef HEADERFILE_H
-#define HEADERFILE_H
+#ifndef TRIINSERTDICHO_H
+#define TRIINSERTDICHO_H
 
-#define MAX 1000000
+#include <stdio.h>
+
+#define MAX 100000
 typedef int TABLEAU[MAX];
 
-void TriInsertDicho(TABLEAU t, int tabSize);
+void TriInsertDicho(TABLEAU t, size_t tabSize);
 
 int position_dicho(int i,TABLEAU t);
 

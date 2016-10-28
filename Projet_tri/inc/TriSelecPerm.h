@@ -1,9 +1,11 @@
-#ifndef HEADERFILE_H
-#define HEADERFILE_H
+#ifndef TRISELECPERM_H
+#define TRISELECPERM_H
 
-#define MAX 1000000
+#include <stdio.h>
+
+#define MAX 100000
 typedef int TABLEAU[MAX];
 
-void TriSelecPerm(TABLEAU t, int tabSize);
+void TriSelecPerm(TABLEAU t, size_t tabSize);
 
 #endif

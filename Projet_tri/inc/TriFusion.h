@@ -1,12 +1,15 @@
-#ifndef HEADERFILE_H
-#define HEADERFILE_H
+#ifndef TRIFUSION_H
+#define TRIFUSION_H
 
-#define MAX 1000000
+#include <stdio.h>
+
+#define MAX 100000
 typedef int TABLEAU[MAX];
 
 void Fusion(TABLEAU t, int debut, int pivot, int fin);
 
+void TriFusionRecurs(TABLEAU t, int debut, int fin);
 
-void TriFusion(TABLEAU t, int debut, int fin);
+void TriFusion(TABLEAU t, size_t tabSize);
 
 #endif

@@ -1,9 +1,18 @@
-#ifndef HEADERFILE_H
-#define HEADERFILE_H
+#ifndef TRIINSERTSEQ_H
+#define TRIINSERTSEQ_H
 
-#define MAX 1000000
+#include <stdio.h>
+
+#define MAX 100000
 typedef int TABLEAU[MAX];
 
-void TriInsertSeq(TABLEAU t, int tabSize);
+typedef struct nodeList {
+    int value;
+    struct nodeList *next;
+} nodeList;
+
+void addNodeInList(nodeList **list, int value);
+void TriInsertSeqFIFO(TABLEAU t, size_t tabSize);
+void TriInsertSeq(TABLEAU t, size_t tabSize);
 
 #endif

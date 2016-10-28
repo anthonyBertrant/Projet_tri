@@ -5,11 +5,7 @@
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
-#include <stdio.h>
 #include "TriInsertDicho.h"
-
-#define MAX 1000000
-typedef int TABLEAU[MAX];
 
 void translation(int p, int i, TABLEAU t){
     /*spec: translation de t[p...i-1] vers t[p+1...i] */
@@ -35,7 +31,7 @@ int position_dicho(int i,TABLEAU t){
     return g;
 }
 
-void TriInsertDicho(TABLEAU t, int tabSize){
+void TriInsertDicho(TABLEAU t, size_t tabSize){
     /*spec: tri du tableau t par insertion dichotomique */
     int i,p,x;
     for(i = 1; i < tabSize; i++){

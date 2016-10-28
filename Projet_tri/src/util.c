@@ -5,53 +5,44 @@
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
-#include "util.h"
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 
-#define MAX 1000000
-typedef int TABLEAU[MAX];
+#include "util.h"
 
-int tab[15] = {5, 500, 5000, 10000, 50000, 100000,
-    200000, 300000, 400000, 500000, 600000,
-    700000, 800000, 900000, 1000000};
+void afficherTableau(TABLEAU t, size_t tabSize){
+    for(size_t i = 0; i < tabSize; ++i){
+        printf(" %d ", t[i]);
+    }
+}
 
-
-
-void GenerateRandTab(TABLEAU t, int tabSize){
-   /*Specification: la fonction rempli le tableau d'entier aléatoire pour 
-    une taille donnée*/
+void GenerateRandTab(TABLEAU t, size_t tabSize){
     int x = tabSize + 300;
-    //srand(time(NULL));
-    for(int i = 0; i < tabSize; ++i){
+    srand(time(NULL));
+    for(size_t i = 0; i < tabSize; ++i){
         t[i] = (rand() % x);
     }
 }
 
-void WriteResultInFile(float result, int taille, const char *filename){
-    /*Specification: La fonction ecris dans un fichier .csv les informations <result> et
-     <taille> pour un fichier <filename> donné. Si le fichier existe deja, il est complété
-     sinon, il est crée.*/
-    
-    
+void WriteResultInFile(float result, int size, const char *filename){
     if( access( filename, F_OK ) != -1 ) {
         // file exists
         FILE* file = NULL;
         file = fopen(filename, "a");
-        fprintf(file, "%d;%f \n",taille,result);
+        fprintf(file, "%d;%f \n", size, result);
         fclose(file);
     } else {
         // file doesn't exist
         FILE* file = NULL;
         file = fopen(filename, "a");
-        
+
         if(file != NULL){
             fprintf(file, "%s","Taille; Resultat en seconde\n");
-            fprintf(file, "%d;%f \n",taille,result);
+            fprintf(file, "%d;%f \n", size, result);
             fclose(file);
-        
+
         }else {
             printf("Impossible d'ouvrir le fichier %s", filename);
         }
@@ -59,8 +50,6 @@ void WriteResultInFile(float result, int taille, const char *filename){
 }
 
 void Swap(TABLEAU t, int index1, int index2){
-    /*spec: la fonction permet de permutter deux elements d'un tableau*/
-    
     int tmp;
     tmp = t[index1];
     t[index1] = t[index2];
