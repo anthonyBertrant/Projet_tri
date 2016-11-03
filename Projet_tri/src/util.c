@@ -19,7 +19,7 @@ void afficherTableau(TABLEAU t, size_t tabSize){
 }
 
 void GenerateRandTab(TABLEAU t, size_t tabSize){
-    int x = tabSize + 300;
+    size_t x = tabSize + 300;
     srand(time(NULL));
     for(size_t i = 0; i < tabSize; ++i){
         t[i] = (rand() % x);

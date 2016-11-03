@@ -25,28 +25,25 @@ void addNodeInList(nodeList **list, int value) {
 
     if (!tmpList) {
         *list = elem;
-        printf("1 seul element\n");
         return;
     }
 
     if (value < tmpList->value) {
         elem->next = tmpList;
         *list = elem;
-        printf("insere avant\n");
         return;
     }
     else
     {
         tmpNode = tmpList->next;
-        while (tmpNode)
+        while (tmpNode != NULL)
         {
             if (value <= tmpNode->value) break;
-            tmpNode = tmpList->next;
+            tmpNode = tmpNode->next;
         }
         elem->next = tmpNode;
         tmpList->next = elem;
     }
-    afficherListe(*list);
 }
 
 void TriInsertSeqFIFO(TABLEAU t, size_t tabSize)
@@ -54,7 +51,7 @@ void TriInsertSeqFIFO(TABLEAU t, size_t tabSize)
     nodeList *list;
     for (int i = 0; i < tabSize; ++i)
         addNodeInList(&list, t[i]);
-    afficherListe(list);
+    //afficherListe(list);
 }
 
 void TriInsertSeq(TABLEAU t, size_t tabSize)

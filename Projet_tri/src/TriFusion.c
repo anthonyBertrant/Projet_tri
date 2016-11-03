@@ -5,8 +5,8 @@
 //  Created by Anthony Bertrant on 21/09/2016.
 //  Copyright © 2016 AnthonyBertrant_BriceMaussang. All rights reserved.
 //
-#include <stdlib.h>
 #include "TriFusion.h"
+#include <stdlib.h>
 
 void Fusion(TABLEAU t, int g, int m, int d){
     /*spec: entrée: 0 <= debut <= pivot < fin <= taille -1
