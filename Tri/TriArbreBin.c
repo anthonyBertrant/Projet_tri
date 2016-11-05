@@ -15,6 +15,15 @@ void afficherArbre(node *tree)
     if (tree->right) afficherArbre(tree->right);
 }
 
+void remplirTabAvecArbre(nodeBinTree *tree, TABLEAU t, int *index)
+{
+    if(!tree) return;
+    if (tree->left) remplirTabAvecArbre(tree->left, t, index);
+    t[*index] = tree->value;
+    (*index)++;
+    if (tree->right) remplirTabAvecArbre(tree->right, t, index);
+}
+
 void addNode(node **tree, int value)
 {
     node *tmpTree = *tree;
@@ -59,5 +68,6 @@ node* construireArbre(TABLEAU t, size_t size)
 void TriArbreBin(TABLEAU t, size_t tabSize)
 {
     node *arbre = construireArbre(t, tabSize);
-    //afficherArbre(arbre);
+    int index = 0;
+    remplirTabAvecArbre(arbre, t, &index);
 }
