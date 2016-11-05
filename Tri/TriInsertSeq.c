@@ -7,6 +7,8 @@
 //
 #include "TriInsertSeq.h"
 
+#include <stdlib.h>
+
 void afficherListe(nodeList *list) {
     while (list)
     {
@@ -15,7 +17,7 @@ void afficherListe(nodeList *list) {
     }
 }
 
-void addNodeInList(nodeList **list, int value) {
+void addNodeInList(nodeList **list, const int value) {
     nodeList *tmpList = *list;
     nodeList *tmpNode;
 
@@ -25,39 +27,47 @@ void addNodeInList(nodeList **list, int value) {
 
     if (!tmpList) {
         *list = elem;
-        printf("1 seul element\n");
         return;
     }
 
     if (value < tmpList->value) {
         elem->next = tmpList;
         *list = elem;
-        printf("insere avant\n");
         return;
     }
     else
     {
-        tmpNode = tmpList->next;
-        while (tmpNode)
+        tmpNode = tmpList;
+        tmpList = tmpList->next;
+        while (tmpList)
         {
-            if (value <= tmpNode->value) break;
-            tmpNode = tmpList->next;
+            if (value <= tmpList->value) break;
+            tmpNode = tmpList;
+            tmpList = tmpList->next;
         }
-        elem->next = tmpNode;
-        tmpList->next = elem;
+        elem->next = tmpList;
+        tmpNode->next = elem;
     }
-    afficherListe(*list);
+
 }
 
-void TriInsertSeqFIFO(TABLEAU t, size_t tabSize)
+void remplirTableau(TABLEAU t, nodeList *list) {
+    for (int i = 0; list; ++i) {
+        t[i] = list->value;
+        list = list->next;
+    }
+}
+
+void TriInsertSeqFIFO(TABLEAU t, const size_t tabSize)
 {
     nodeList *list;
-    for (int i = 0; i < tabSize; ++i)
+    for (int i = 0; i < tabSize; ++i) {
         addNodeInList(&list, t[i]);
-    afficherListe(list);
+    }
+    remplirTableau(t, list);
 }
 
-void TriInsertSeq(TABLEAU t, size_t tabSize)
+void TriInsertSeq(TABLEAU t, const size_t tabSize)
 {
     for(size_t i = 0; i < tabSize; ++i){
         int x = t[i];
@@ -70,4 +80,5 @@ void TriInsertSeq(TABLEAU t, size_t tabSize)
         t[j] = x;
     }
 }
+
 
