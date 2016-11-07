@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#define MAX 100000
+#define MAX 1000000
 typedef int TABLEAU[MAX];
 
 void TriRapideRecurs(TABLEAU t, int begin, int end);

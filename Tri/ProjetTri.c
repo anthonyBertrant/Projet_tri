@@ -52,7 +52,7 @@ float TestTri (TABLEAU t, size_t tabSize, pf algoTri)
 
         if( result >= 300.0){
             printf("ARRET TEST: TIME OUT !\n");
-            return 300.0;
+            return result/i;
         }
         printf(". ");
     }
@@ -78,12 +78,13 @@ void ExecuteBenchmarks(t_flags algoTri)
     srand(time(NULL));
 
     printf("==> DEBUT %s\n\n", algoTri);
-    for(size_t i = 0; i < 5; ++i){
+    for(size_t i = 0; i < 15; ++i){
         size = Ksizes[i];
         printf("- taille = %d\n", size);
-	result = TestTri(t, size, algoTri.pf);
-	printf("\n- fin pour taille %d\t\ttmps = %.2f\n\n", size, result);
-	WriteResultInFile(result, size, filename);
+        result = TestTri(t, size, algoTri.pf);
+        printf("\n- fin pour taille %d\t\ttmps = %.2f\n\n", size, result);
+        WriteResultInFile(result, size, filename);
+        if(result >= 15.0) break;
     }
     printf("==> FIN %s\n\n", algoTri);
 }
@@ -92,13 +93,13 @@ int main()
 {
     t_flags functions[]= {
         //{"Tri par Insertion Sequentielle (FIFO)", &TriInsertSeqFIFO},
-        {"Tri Fusion", &TriFusion},
-        {"Tri Rapide", &TriRapide},
-        {"Tri a Bulles", &TriBulles},
+        //{"Tri Fusion", &TriFusion},
+        //{"Tri Rapide", &TriRapide},
+        //{"Tri a Bulles", &TriBulles},
         {"Tri par Arbre Binaire", &TriArbreBin},
-        {"Tri par Selection Permutation", &TriSelecPerm},
-        {"Tri par Insertion Dichotomique", &TriInsertDicho},
-        {"Tri par Insertion Sequentielle", &TriInsertSeq}
+        //{"Tri par Selection Permutation", &TriSelecPerm},
+        //{"Tri par Insertion Dichotomique", &TriInsertDicho},
+        //{"Tri par Insertion Sequentielle", &TriInsertSeq}
     };
 
     size_t i = 0;

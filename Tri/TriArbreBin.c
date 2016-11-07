@@ -15,7 +15,7 @@ void afficherArbre(node *tree)
     if (tree->right) afficherArbre(tree->right);
 }
 
-void remplirTabAvecArbre(nodeBinTree *tree, TABLEAU t, int *index)
+void remplirTabAvecArbre(node *tree, TABLEAU t, int *index)
 {
     if(!tree) return;
     if (tree->left) remplirTabAvecArbre(tree->left, t, index);
